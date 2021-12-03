@@ -16,7 +16,7 @@ Sub stock_script()
     'Declare worksheet 
     Dim ws As Worksheet
     'ws.Activate
-    
+
     'Loop through worksheet
     For Each ws In Worksheets
         'Column headers using ranges
@@ -63,8 +63,8 @@ Sub stock_script()
                 ws.Cells(summary_row, 9).Value = ticker
                 ws.Cells(summary_row, 10).Value = year_change
                 ws.Cells(summary_row, 11).Value = perct_change
-                ws.Cells(start_data, 11).NumberFormat = "#.##%"
-                ws.Cells(start_data, 12).Value = stock_vol
+                ws.Cells(summary_row, 11).NumberFormat = "#.##%"
+                ws.Cells(summary_row, 12).Value = stock_vol
 
                 'Got to the next row and rest variables
                 summary_row = summary_row + 1
